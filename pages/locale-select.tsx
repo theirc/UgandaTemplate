@@ -13,7 +13,18 @@ const langs: Lang[] = [
     langShort: 'en-us',
     langLong: 'English',
   },
-  // TODO: Add supported languages.
+  {
+    langShort: 'fr',
+    langLong: 'Français',
+  }, 
+  {
+    langShort: 'so',
+    langLong:' Somali',
+  }, 
+  {
+    langShort: 'sw',
+    langLong: 'Kiswahili',
+  }
 ];
 
 /** The locale selection page.

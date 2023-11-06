@@ -4,10 +4,11 @@ const pack = require('./package.json');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: false,
+  swcMinify: true,
   // Keep in sync with locales configured in /lib/locale.ts.
   i18n: {
-    locales: ['default', 'en-us' /* TODO */],
+    locales: ['default', 'en-us'],
+    // 'so', 'sw', 'fr', 'rn', 'ln'
     defaultLocale: 'default',
     localeDetection: false,
   },
@@ -22,15 +23,14 @@ const nextConfig = {
       },
     ];
   },
-  // TODO: add images url to whitelist them
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: 'https',
-  //       hostname: 'signpost-greece.zendesk.com',
-  //     },
-  //   ],
-  // },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'signpost-uganda.zendesk.com',
+      },
+    ],
+  },
   publicRuntimeConfig: {
     version: pack.dependencies['@ircsignpost/signpost-base'],
   },
