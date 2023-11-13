@@ -13,8 +13,8 @@ export const LOCALES: { [key: string]: Locale } = {
     name: 'English',
     directus: 'en-US',
   },
-  'rn-BI': {
-    url: 'rn-BI',
+  'rn-bi': {
+    url: 'rn-bi',
     direction: 'ltr',
     name: 'Ikirundi',
     directus: 'ki-KI',
@@ -29,8 +29,8 @@ export const LOCALE_CODES_TO_CANONICAL_LOCALE_CODES: { [key: string]: string } =
   {
     en: 'en-us',
     'en-us': 'en-us',
-    rn: 'rn-BI',
-    'rn-BI': 'rn-BI',
+    rn: 'rn-bi',
+    'rn-bi': 'rn-bi',
     fr: 'fr',
     so: 'so',
     sw: 'sw',

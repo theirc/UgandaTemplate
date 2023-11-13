@@ -31,28 +31,13 @@ export const USE_CAT_SEC_ART_CONTENT_STRUCTURE = false;
 export const CATEGORY_ICON_NAMES: { [key: string]: string } = {
   '13564259168285': 'groups',
   '13555839397917': 'home',
-  '13564213154333': '',
 };
 
 // A mapping from section ID to a Material icon for that section.
-export const SECTION_ICON_NAMES: { [key: string]: string } = {
-  '13556261504029': 'group',
-  '13556285312797': 'home',
-  '13556218925725': 'home',
-  '13556179154077': 'group',
-  '13556157547805': '',
-  '13556079737245': '',
-  '13556092276253': '',
-  '13556031706141': '',
-  '13555945431965': '',
-  '13555969057181': 'group',
-  '13564311729181': '',
-};
+export const SECTION_ICON_NAMES: { [key: string]: string } = {};
 
 // A list of category IDs that the site should not display.
-export const CATEGORIES_TO_HIDE: number[] = [
-  // 13564213154333,
-];
+export const CATEGORIES_TO_HIDE: number[] = [13564213154333, 13564259168285];
 
 // A map from a locale code to Zendesk locale id used for dynamic content translations.
 // https://developer.zendesk.com/api-reference/ticketing/account-configuration/locales/
