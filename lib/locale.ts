@@ -13,22 +13,28 @@ export const LOCALES: { [key: string]: Locale } = {
     name: 'English',
     directus: 'en-US',
   },
-  // fr: { url: 'fr', direction: 'ltr', name: 'Français', directus: 'fr-FR' },
-  // so: { url: 'so', direction: 'ltr', name: 'Soomali', directus: 'so-SO' },
-  // sw: { url: 'sw', direction: 'ltr', name: 'Kiswahili', directus: 'sw-SW' },
-  // ln: {url: 'ln', direction: 'ltr', name: 'lingála', directus: 'ln-LN' },
-  // rn: {url: 'rn-BI', direction: 'ltr', name: 'Ikirundi', directus: 'ki-KI'},
-
+  'rn-BI': {
+    url: 'rn-BI',
+    direction: 'ltr',
+    name: 'Ikirundi',
+    directus: 'ki-KI',
+  },
+  fr: { url: 'fr', direction: 'ltr', name: 'Français', directus: 'fr-FR' },
+  so: { url: 'so', direction: 'ltr', name: 'Soomali', directus: 'so-SO' },
+  sw: { url: 'sw', direction: 'ltr', name: 'Kiswahili', directus: 'sw-SW' },
+  ln: { url: 'ln', direction: 'ltr', name: 'Lingála', directus: 'ln-LN' },
 };
 
 export const LOCALE_CODES_TO_CANONICAL_LOCALE_CODES: { [key: string]: string } =
   {
     en: 'en-us',
     'en-us': 'en-us',
-    // fr: 'fr',
-    // so: 'so',
-    // sw: 'sw',
-    // ln: 'ln',
+    rn: 'rn-BI',
+    'rn-BI': 'rn-BI',
+    fr: 'fr',
+    so: 'so',
+    sw: 'sw',
+    ln: 'ln',
   };
 
 // Returns the effective locale given locale code.

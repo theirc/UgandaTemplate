@@ -129,15 +129,15 @@ export function populateSocialMediaLinks(dynamicContent: {
   return {
     facebookLink: {
       title: dynamicContent['default_banner_facebook_title'],
-      href: ' tubulire_facebook_link', 
+      href: ' tubulire_facebook_link',
     },
     whatsappLink: {
       title: dynamicContent['default_banner_whatsapp_title'],
-      href: 'tubulire_whatsapp_link', 
+      href: 'tubulire_whatsapp_link',
     },
     whatsappChannel: {
       title: dynamicContent['default_banner_whatsappchannel_title'],
-      href: 'tubulire_whatsapp_channel_link', 
+      href: 'tubulire_whatsapp_channel_link',
     },
     messengerLink: {
       title: dynamicContent['default_banner_messenger_title'],
@@ -151,7 +151,7 @@ export function populateHeaderBannerStrings(dynamicContent: {
 }): HeaderBannerStrings {
   return {
     // TODO: replace welcomeTitle with website-specific Dynamic content ID.
-    welcomeTitle: dynamicContent['tubulire-mission_statement'],
+    welcomeTitle: dynamicContent['tubulire::mission_statement'],
     socialMediaTitle: dynamicContent['default_banner_social_media_title'],
     socialMediaDescription:
       dynamicContent['default_banner_social_media_description'],

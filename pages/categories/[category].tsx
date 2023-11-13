@@ -1,7 +1,7 @@
 import CategoryPage, {
   CategoryStrings,
   getCategorySection,
-  getSectionsForCategory, 
+  getSectionsForCategory,
 } from '@ircsignpost/signpost-base/dist/src/category-page';
 import CookieBanner from '@ircsignpost/signpost-base/dist/src/cookie-banner';
 import { MenuOverlayItem } from '@ircsignpost/signpost-base/dist/src/menu-overlay';

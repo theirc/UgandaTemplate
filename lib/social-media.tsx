@@ -15,7 +15,7 @@ export interface SocialMediaLink {
 export interface SocialMediaLinks {
   facebookLink: SocialMediaLink;
   whatsappLink: SocialMediaLink;
-  whatsappChannel: SocialMediaLink
+  whatsappChannel: SocialMediaLink;
   messengerLink: SocialMediaLink;
 }
 

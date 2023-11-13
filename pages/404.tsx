@@ -43,7 +43,6 @@ import {
 } from '../lib/translations';
 import { getZendeskMappedUrl, getZendeskUrl } from '../lib/url';
 
-
 interface Custom404Props {
   currentLocale: Locale;
   // Page title.

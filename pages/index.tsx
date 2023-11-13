@@ -15,7 +15,6 @@ import { MenuOverlayItem } from '@ircsignpost/signpost-base/dist/src/menu-overla
 import { ServiceMapProps } from '@ircsignpost/signpost-base/dist/src/service-map';
 import {
   CategoryWithSections,
-  ZendeskArticle,
   ZendeskCategory,
   getArticle,
   getArticles,

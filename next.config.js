@@ -7,8 +7,7 @@ const nextConfig = {
   swcMinify: true,
   // Keep in sync with locales configured in /lib/locale.ts.
   i18n: {
-    locales: ['default', 'en-us'],
-    // 'so', 'sw', 'fr', 'rn', 'ln'
+    locales: ['default', 'en-us', 'so', 'sw', 'fr', 'rn', 'ln'],
     defaultLocale: 'default',
     localeDetection: false,
   },
@@ -43,10 +42,9 @@ module.exports = withLess({
       // See full list of Ant styles here:
       // https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
       modifyVars: {
-        // TODO: Update theme colors
-        'primary-color': '#51258F',
-        'secondary-color': '#854ECA',
-        'accent-color': '#13C2C2',
+        'primary-color': '#31437C',
+        'secondary-color': '#31437C',
+        'accent-color': '#CC8723',
         'info-color': '@accent-color',
         'alert-info-bg-color': '@accent-color',
         // Override Ant typography.
