@@ -44,7 +44,7 @@ export const CATEGORIES_TO_HIDE: number[] = [13564213154333, 13564259168285];
 // Keep in sync with locales configured in /next.config.js.
 export const DYNAMIC_CONTENT_LOCALES: { [key: string]: number } = {
   'en-us': 1,
-  'rn-BI': 1604,
+  'rn-bi': 1604,
   fr: 16,
   so: 1403,
   sw: 1362,
