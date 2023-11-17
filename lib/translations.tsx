@@ -78,6 +78,10 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_banner_messenger_title',
   'default_banner_whatsapp_title',
   'default_banner_whatsappchannel_title',
+  'tubulire_facebook_link',
+  'tubulire_whatsapp_link',
+  'tubulire_whatsapp_channel_link',
+  'tubulire_facebook_messenger_link',
   // Main body strings.
   'default_information_title',
   'tubulire_information_description',
@@ -129,19 +133,19 @@ export function populateSocialMediaLinks(dynamicContent: {
   return {
     facebookLink: {
       title: dynamicContent['default_banner_facebook_title'],
-      href: ' tubulire_facebook_link',
+      href: dynamicContent['tubulire_facebook_link'],
     },
     whatsappLink: {
       title: dynamicContent['default_banner_whatsapp_title'],
-      href: 'tubulire_whatsapp_link',
+      href: dynamicContent['tubulire_whatsapp_link'],
     },
     whatsappChannel: {
       title: dynamicContent['default_banner_whatsappchannel_title'],
-      href: 'tubulire_whatsapp_channel_link',
+      href: dynamicContent['tubulire_whatsapp_channel_link'],
     },
     messengerLink: {
       title: dynamicContent['default_banner_messenger_title'],
-      href: 'tubulire_facebook_messenger_link',
+      href: dynamicContent['tubulire_facebook_messenger_link'],
     },
   };
 }
