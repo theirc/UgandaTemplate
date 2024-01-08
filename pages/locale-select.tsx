@@ -7,13 +7,33 @@ import type { Lang } from '@ircsignpost/signpost-base/dist/src/locale-select-pag
 import Image from 'next/image';
 
 import { SITE_TITLE } from '../lib/constants';
+import logo from '../public/tubulire_logo.png';
 
 const langs: Lang[] = [
   {
     langShort: 'en-us',
     langLong: 'English',
   },
-  // TODO: Add supported languages.
+  {
+    langShort: 'fr',
+    langLong: 'Français',
+  },
+  {
+    langShort: 'so',
+    langLong: ' Somali',
+  },
+  {
+    langShort: 'sw',
+    langLong: 'Kiswahili',
+  },
+  {
+    langShort: 'ln',
+    langLong: 'Lingála',
+  },
+  {
+    langShort: 'rn',
+    langLong: 'Ikirundi',
+  },
 ];
 
 /** The locale selection page.
@@ -33,7 +53,7 @@ export default function LocaleSelectPage() {
       siteTitle={SITE_TITLE}
       message={'Please choose your preferred language'}
       langs={langs}
-      image={<span>TODO</span>}
+      image={<Image src={logo} alt="icon" />}
     />
   );
 }

@@ -16,6 +16,11 @@ import { ServiceMapProps } from '@ircsignpost/signpost-base/dist/src/service-map
 import {
   CategoryWithSections,
   ZendeskCategory,
+  getArticle,
+  getArticles,
+  getCategories,
+  getCategoriesWithSections,
+  getTranslationsFromDynamicContent,
 } from '@ircsignpost/signpost-base/dist/src/zendesk';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
@@ -36,6 +41,7 @@ import {
   SECTION_ICON_NAMES,
   SITE_TITLE,
   USE_CAT_SEC_ART_CONTENT_STRUCTURE,
+  USE_RECENT_ARTICLES,
   ZENDESK_AUTH_HEADER,
 } from '../lib/constants';
 import {
@@ -57,13 +63,6 @@ import {
   populateSocialMediaLinks,
 } from '../lib/translations';
 import { getZendeskMappedUrl, getZendeskUrl } from '../lib/url';
-// TODO Use real Zendesk API implementation.
-import {
-  getArticle,
-  getCategories,
-  getCategoriesWithSections,
-  getTranslationsFromDynamicContent,
-} from '../lib/zendesk-fake';
 
 interface HomeProps {
   currentLocale: Locale;
