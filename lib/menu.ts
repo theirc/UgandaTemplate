@@ -42,11 +42,6 @@ export function getMenuItems(
   } else {
     addMenuItemsInformation(items, strings, categories as ZendeskCategory[]);
   }
-  items.push({
-    key: 'services',
-    label: strings.services, // Make sure this string is defined in your strings object
-    href: '/#service-map',
-  });
   if (includeAbout) {
     items.push({
       key: 'about',
@@ -54,6 +49,11 @@ export function getMenuItems(
       href: `/articles/${ABOUT_US_ARTICLE_ID}`,
     });
   }
+  items.push({
+    key: 'services',
+    label: strings.services, // Make sure this string is defined in your strings object
+    href: '/#service-map',
+  });
   // Include other menu items as needed.
   return items;
 }
