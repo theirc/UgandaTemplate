@@ -31,7 +31,7 @@ const langs: Lang[] = [
     langLong: 'Lingála',
   },
   {
-    langShort: 'rn',
+    langShort: 'rn-BI',
     langLong: 'Ikirundi',
   },
 ];

@@ -25,19 +25,31 @@ export const USE_RECENT_ARTICLES = false;
 // Set to false for the "information" -> category -> article hierarchy, similar to that of Beporsed.
 //
 // TODO
-export const USE_CAT_SEC_ART_CONTENT_STRUCTURE = false;
+export const USE_CAT_SEC_ART_CONTENT_STRUCTURE = true;
 
 // A mapping from category ID to a Material icon for that category.
 export const CATEGORY_ICON_NAMES: { [key: string]: string } = {
   '13564259168285': 'groups',
   '13555839397917': 'home',
+  '13564311729181': 'home',
 };
 
 // A mapping from section ID to a Material icon for that section.
-export const SECTION_ICON_NAMES: { [key: string]: string } = {};
+export const SECTION_ICON_NAMES: { [key: string]: string } = {
+  '13556218925725': 'school',
+  '13556179154077': 'family_restroom',
+  '13556157547805': 'health_and_safety',
+  '13556079737245': 'gavel',
+  '13556092276253': 'history_edu',
+  '13556031706141': 'attach_money',
+  '13555945431965': 'work',
+  '13555969057181': 'how_to_reg',
+};
 
 // A list of category IDs that the site should not display.
-export const CATEGORIES_TO_HIDE: number[] = [13564213154333, 13564259168285];
+export const CATEGORIES_TO_HIDE: number[] = [13564259168285, 13564213154333];
+
+export const MENU_CATEGORIES_TO_HIDE: number[] = [13564213154333];
 
 // A map from a locale code to Zendesk locale id used for dynamic content translations.
 // https://developer.zendesk.com/api-reference/ticketing/account-configuration/locales/

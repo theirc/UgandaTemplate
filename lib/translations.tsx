@@ -27,6 +27,7 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_menu_home_title',
   'default_information_title',
   'default_menu_about_title',
+  'default_menu_services_title',
   // Cookie banner strings.
   'default_cookie_banner',
   'default_accept',
@@ -178,10 +179,8 @@ export function populateServiceMapStrings(dynamicContent: {
     allPopulationsOption: dynamicContent['default_all_populations_option'],
     allAccessibilitiesOption:
       dynamicContent['default_all_accessibilities_option'],
-    distanceAwayStrings: {
-      informationTooltip: dynamicContent['default_distance_away_tooltip'],
-    },
     popupStrings: populatePopupStrings(dynamicContent),
+    distanceAwayStrings: { informationTooltip: '' },
     labelSearchInput: { label: dynamicContent['default_seach_input_text'] },
     labelAccessibility: dynamicContent['default_accessibility_label'],
     labelPopulations: dynamicContent['default_populations_label'],
@@ -288,6 +287,7 @@ export function populateMenuOverlayStrings(dynamicContent: {
     home: dynamicContent['default_menu_home_title'],
     information: dynamicContent['default_information_title'],
     about: dynamicContent['default_menu_about_title'],
+    services: dynamicContent['default_menu_services_title'],
   };
 }
 
