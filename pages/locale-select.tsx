@@ -15,6 +15,10 @@ const langs: Lang[] = [
     langLong: 'English',
   },
   {
+    langShort: 'rn-bi',
+    langLong: 'Ikirundi',
+  },
+  {
     langShort: 'fr',
     langLong: 'Français',
   },
@@ -29,10 +33,6 @@ const langs: Lang[] = [
   {
     langShort: 'ln',
     langLong: 'Lingála',
-  },
-  {
-    langShort: 'rn-BI',
-    langLong: 'Ikirundi',
   },
 ];
 
