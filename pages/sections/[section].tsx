@@ -10,7 +10,6 @@ import {
   Section,
 } from '@ircsignpost/signpost-base/dist/src/topic-with-articles';
 import {
-  getArticle,
   getArticlesForSection,
   getCategoriesWithSections,
   getSection,
@@ -20,13 +19,13 @@ import {
 import { GetStaticProps } from 'next';
 import getConfig from 'next/config';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useBreadcrumbs } from '../../context/BreadcrumbsContext';
 import {
-  ABOUT_US_ARTICLE_ID,
   CATEGORIES_TO_HIDE,
   GOOGLE_ANALYTICS_IDS,
+  MENU_CATEGORIES_TO_HIDE,
   REVALIDATION_TIMEOUT_SECONDS,
   SEARCH_BAR_INDEX,
   SECTION_ICON_NAMES,
@@ -46,10 +45,11 @@ import {
   COMMON_DYNAMIC_CONTENT_PLACEHOLDERS,
   SECTION_PLACEHOLDERS,
   getLastUpdatedLabel,
+  populateFilterSelectStrings,
   populateMenuOverlayStrings,
   populateSectionStrings,
 } from '../../lib/translations';
-import { getZendeskMappedUrl, getZendeskUrl } from '../../lib/url';
+import { getZendeskUrl } from '../../lib/url';
 
 interface CategoryProps {
   currentLocale: Locale;
@@ -73,6 +73,7 @@ export default function Category({
   strings,
   footerLinks,
 }: CategoryProps) {
+  const [sectionDisplayed, setSectionDisplayed] = useState<Section>(section);
   const { publicRuntimeConfig } = getConfig();
   const router = useRouter();
   const { setBreadcrumbs } = useBreadcrumbs();
@@ -83,6 +84,10 @@ export default function Category({
     setBreadcrumbs(test);
   }, [router.asPath, setBreadcrumbs, section.name]);
 
+  useEffect(() => {
+    setSectionDisplayed(section);
+  }, [section]);
+
   return (
     <SectionPage
       currentLocale={currentLocale}
@@ -90,10 +95,9 @@ export default function Category({
       pageTitle={pageTitle}
       sectionId={sectionId}
       sectionItems={sectionItems}
-      section={section}
+      section={sectionDisplayed}
       menuOverlayItems={menuOverlayItems}
       headerLogoProps={getHeaderLogoProps(currentLocale)}
-      footerLinks={footerLinks}
       searchBarIndex={SEARCH_BAR_INDEX}
       cookieBanner={
         <CookieBanner
@@ -102,6 +106,7 @@ export default function Category({
         />
       }
       strings={strings}
+      footerLinks={footerLinks}
       signpostVersion={publicRuntimeConfig?.version}
     />
   );
@@ -228,6 +233,12 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     );
   });
 
+  const menuCategories = await getCategoriesWithSections(
+    currentLocale,
+    getZendeskUrl(),
+    (c) => !MENU_CATEGORIES_TO_HIDE.includes(c.id)
+  );
+
   const sectionItems = categories
     .flatMap((c) => c.sections)
     .map((section) => {
@@ -239,23 +250,14 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
       };
     });
 
-  const aboutUsArticle = await getArticle(
-    currentLocale,
-    ABOUT_US_ARTICLE_ID,
-    getZendeskUrl(),
-    getZendeskMappedUrl(),
-    ZENDESK_AUTH_HEADER
-  );
-
   const menuOverlayItems = getMenuItems(
     populateMenuOverlayStrings(dynamicContent),
-    categories,
-    !!aboutUsArticle
+    menuCategories
   );
 
   const footerLinks = getFooterItems(
     populateMenuOverlayStrings(dynamicContent),
-    categories
+    menuCategories
   );
 
   return {

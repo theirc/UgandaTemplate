@@ -19,7 +19,6 @@ import { useEffect, useState } from 'react';
 
 import { useBreadcrumbs } from '../../context/BreadcrumbsContext';
 import {
-  ABOUT_US_ARTICLE_ID,
   CATEGORIES_TO_HIDE,
   CATEGORY_ICON_NAMES,
   GOOGLE_ANALYTICS_IDS,
@@ -44,7 +43,7 @@ import {
   populateCategoryStrings,
   populateMenuOverlayStrings,
 } from '../../lib/translations';
-import { getZendeskMappedUrl, getZendeskUrl } from '../../lib/url';
+import { getZendeskUrl } from '../../lib/url';
 
 interface CategoryProps {
   currentLocale: Locale;
@@ -209,21 +208,16 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     };
   });
 
-  const aboutUsArticle = await getArticle(
-    currentLocale,
-    ABOUT_US_ARTICLE_ID,
-    getZendeskUrl(),
-    getZendeskMappedUrl(),
-    ZENDESK_AUTH_HEADER
-  );
-
   const menuOverlayItems = getMenuItems(
     populateMenuOverlayStrings(dynamicContent),
-    categories,
-    !!aboutUsArticle
+    categories
   );
 
-  // TODO Use real Zendesk API instead of the faked one.
+  const footerLinks = getFooterItems(
+    populateMenuOverlayStrings(dynamicContent),
+    categories
+  );
+
   const sections = await getSectionsForCategory(
     currentLocale,
     Number(params?.category),
@@ -237,11 +231,6 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
       value: section.id,
     };
   });
-
-  const footerLinks = getFooterItems(
-    populateMenuOverlayStrings(dynamicContent),
-    categories
-  );
 
   return {
     props: {
