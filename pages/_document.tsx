@@ -4,6 +4,16 @@ function Document() {
   return (
     <Html>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="btSFo2MaOBT8Lpfd78R0Xag_LhALEkT0SXyS_Pzh-90"
+        />
+        <meta property="og:title" content="Tubulire" />
+        <meta property="og:description" content="Tubulire Website" />
+        <meta
+          property="og:image"
+          content="https://tubulire.info/api/og-image"
+        />
         <script
           src="https://kit.fontawesome.com/027db3ea3f.js"
           crossOrigin="anonymous"
