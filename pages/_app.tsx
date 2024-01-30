@@ -25,6 +25,9 @@ import '@ircsignpost/signpost-base/styles/article-content.less';
 import '@ircsignpost/signpost-base/styles/service-content.less'
 import '@ircsignpost/signpost-base/styles/distance-away.less'
 import '@ircsignpost/signpost-base/styles/share-button.less';
+import "mapbox-gl/dist/mapbox-gl.css";
+import 'mapbox-gl/dist/mapbox-gl.css';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import Analytics from '@ircsignpost/signpost-base/dist/src/analytics';
 import { GOOGLE_ANALYTICS_IDS } from '../lib/constants';
 
