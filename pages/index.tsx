@@ -34,7 +34,6 @@ import {
   DIRECTUS_COUNTRY_ID,
   DIRECTUS_INSTANCE,
   GOOGLE_ANALYTICS_IDS,
-  MAP_DEFAULT_COORDS,
   MENU_CATEGORIES_TO_HIDE,
   REVALIDATION_TIMEOUT_SECONDS,
   SEARCH_BAR_INDEX,
@@ -238,7 +237,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       socialMediaLinks: populateSocialMediaLinks(dynamicContent),
       serviceMapProps: {
         services,
-        defaultCoords: MAP_DEFAULT_COORDS,
         shareButton: getShareButtonStrings(dynamicContent),
         serviceTypes,
         providers,
