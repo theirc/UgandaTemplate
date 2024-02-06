@@ -69,6 +69,7 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_friday_label',
   'default_saturday_label',
   'default_sunday_label',
+  'ai_disclaimer_text',
 ];
 
 export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
@@ -181,11 +182,11 @@ export function populateServiceMapStrings(dynamicContent: {
       dynamicContent['default_all_accessibilities_option'],
     popupStrings: populatePopupStrings(dynamicContent),
     distanceAwayStrings: { informationTooltip: '' },
-    labelSearchInput: { label: dynamicContent['default_seach_input_text'] },
     labelAccessibility: dynamicContent['default_accessibility_label'],
     labelPopulations: dynamicContent['default_populations_label'],
     labelProvider: dynamicContent['default_providers_label'],
     labelServicesTypes: dynamicContent['default_service_type_label'],
+    searchListString: dynamicContent['default_search_hint'],
   };
 }
 
@@ -277,6 +278,7 @@ export function populateArticleContentStrings(dynamicContent: {
     textReaderTitle: dynamicContent['default_article_reader_title'],
     shareButtonStrings: getShareButtonStrings(dynamicContent),
     homeBreadcrumbString: 'Home',
+    aiDisclaimerString: dynamicContent['ai_disclaimer_text'],
   };
 }
 
