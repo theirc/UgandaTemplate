@@ -13,11 +13,11 @@ export const LOCALES: { [key: string]: Locale } = {
     name: 'English',
     directus: 'en-US',
   },
-  'rn-bi': {
-    url: 'rn-bi',
-    direction: 'ltr',
-    name: 'Ikirundi',
-    directus: 'ki-KI',
+  'ar': {
+    url: 'ar',
+    direction: 'rtl',
+    name: 'العربية',
+    directus: 'ar-SA',
   },
   fr: { url: 'fr', direction: 'ltr', name: 'Français', directus: 'fr-FR' },
   so: { url: 'so', direction: 'ltr', name: 'Soomali', directus: 'so-SO' },
@@ -29,8 +29,8 @@ export const LOCALE_CODES_TO_CANONICAL_LOCALE_CODES: { [key: string]: string } =
   {
     en: 'en-us',
     'en-us': 'en-us',
-    rn: 'rn-bi',
-    'rn-bi': 'rn-bi',
+    ar: 'ar',
+    'ar': 'ar',
     fr: 'fr',
     so: 'so',
     sw: 'sw',
