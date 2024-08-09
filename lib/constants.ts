@@ -49,7 +49,7 @@ export const MENU_CATEGORIES_TO_HIDE: number[] = [13564213154333];
 // Keep in sync with locales configured in /next.config.js.
 export const DYNAMIC_CONTENT_LOCALES: { [key: string]: number } = {
   'en-us': 1,
-  'ar': 66,
+  ar: 66,
   fr: 16,
   so: 1403,
   sw: 1362,
