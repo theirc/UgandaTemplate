@@ -13,12 +13,7 @@ export const LOCALES: { [key: string]: Locale } = {
     name: 'English',
     directus: 'en-US',
   },
-  'ar': {
-    url: 'ar',
-    direction: 'rtl',
-    name: 'العربية',
-    directus: 'ar-SA',
-  },
+  ar: { url: 'ar', direction: 'rtl', name: 'العربية', directus: 'ar-SA' },
   fr: { url: 'fr', direction: 'ltr', name: 'Français', directus: 'fr-FR' },
   so: { url: 'so', direction: 'ltr', name: 'Soomali', directus: 'so-SO' },
   sw: { url: 'sw', direction: 'ltr', name: 'Kiswahili', directus: 'sw-SW' },
